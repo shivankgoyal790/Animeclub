@@ -1,0 +1,42 @@
+.footer{
+    background-color: #302f2f;
+    box-sizing: border-box;
+}
+
+.followlinks{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    line-height: -1;
+    width: 200px;
+    color: white;
+}
+
+.followlinks > li {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.followlinks > li:hover{
+    color: #e5a00d;
+    transition: ease 1s;
+}
+
+
+.navlist2{
+    list-style: none;
+    color: white;
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.navlist2 > li:hover {
+    color: #e5a00d;
+    transition: ease 0.5s;
+    cursor: pointer;
+}

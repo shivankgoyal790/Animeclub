@@ -1,0 +1,63 @@
+.newscard{
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 650px;
+    margin: 10px auto auto auto;
+    box-sizing: border-box;
+    border: 1px solid gold;
+}
+
+.imagecontainer{
+    flex:25%;
+    background-color: royalblue;
+    box-sizing: border-box;
+}
+
+.newscontainer{
+    margin-left: 10px;
+    box-sizing: border-box;
+    flex: 75%;
+    padding: 10px;
+}
+
+.imagecontainer > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.headline{
+    font-size: 20px;
+    margin: 0;
+}
+
+.news{
+    font-size: 15px;
+    margin: 0;
+}
+
+.like{
+    background-color: rgb(0,0,0,0);
+    border: 2px solid #dbdbde;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 4px 20px;
+    border-radius: 1px;
+    outline: none;
+    color: #727272;
+}
+
+.like:hover{
+transition: ease 0.4s;
+cursor: pointer;
+background-color: whitesmoke;
+}
+
+.like >.count{
+    color: #a5a5a5;
+}
+
+.icon{
+    color: red;
+}

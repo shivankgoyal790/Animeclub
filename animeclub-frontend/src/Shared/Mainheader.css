@@ -1,0 +1,24 @@
+.main-background{
+    width: 100%;
+    box-sizing: border-box;
+    height: 600px;
+}
+
+
+.main-background > img{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    filter: brightness(0.3);
+}
+
+.headercontent{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+body{
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
