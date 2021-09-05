@@ -5,6 +5,7 @@
     align-items: center; 
     justify-content: space-evenly;
     box-sizing: border-box;
+    z-index: 3;
 }
 
 .nav-container > h1{
@@ -12,6 +13,14 @@
     padding: 6px 8px;
     border: 3px solid #e5a00d;
     cursor: pointer;
+    animation-name: mylogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mylogo{
+    from{transform: rotateY(0deg)}
+    to{transform: rotateY(360deg)}
 }
 
 .signin{

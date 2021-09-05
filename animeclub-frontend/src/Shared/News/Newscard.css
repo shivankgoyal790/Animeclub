@@ -10,8 +10,8 @@
 
 .imagecontainer{
     flex:25%;
-    background-color: royalblue;
     box-sizing: border-box;
+    height: auto;
 }
 
 .newscontainer{
@@ -60,4 +60,32 @@ background-color: whitesmoke;
 
 .icon{
     color: red;
+}
+
+
+@media screen and (max-width:650px) {
+    .newscard{
+        width: 100%;
+    }
+
+    .headline{
+        font-size: 16px;
+    }
+
+    .news{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .newscard{
+        flex-direction: column;
+    }
+
+    .imagecontainer > img{
+        height: 220px;
+        object-fit: contain;
+        
+    }
+
 }

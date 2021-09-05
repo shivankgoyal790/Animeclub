@@ -1,24 +1,78 @@
 .main-background{
     width: 100%;
     box-sizing: border-box;
-    height: 600px;
+    height: 650px;
+    background-image: url("../images/anime.jpg");
+    background-size: contain;
+    background-position-x: center;
+    overflow-x: hidden;
 }
 
 
-.main-background > img{
-    height: 600px;
+.main-background > .backshadow{
+    height: 650px;
     width: 100%;
-    position: relative;
-    filter: brightness(0.3);
-}
-
-.headercontent{
     position: absolute;
     top: 0;
     left: 0;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.headercontent{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    color: white;
+
+}
+
+.site-info{
+    width: 600px;
+    height: 350px;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.site-info > h1{
+    font-size: 3rem;
+    width: 100%;
+}
+.site-info > p{
+    font-size: 1.5rem;
+    margin: 0;
+    
 }
 body{
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
+
+
+@media screen and (max-width:620px) {
+     
+    .site-info{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+     .site-info {
+         height: 300px;
+     }
+    .site-info > h1{
+        font-size: 2rem;
+    }
+
+    .site-info > p { 
+        font-size: 1.2rem;
+    }
+}
+

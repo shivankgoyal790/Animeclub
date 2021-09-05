@@ -8,7 +8,7 @@ const Navbar = () =>{
             <li>Trending</li>
             <li>Premium</li>
             <li>Movies</li>
-            <li>About</li>
+            <li>News</li>
         </ul>
     )
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import "./News.css"
 import Newslist from "./Newslist"
 
 const News = () =>{
@@ -25,9 +26,11 @@ const News = () =>{
            
     ]
     return(
-        <>
+        <div className="news-block">
+        <h1 className="update">Latest Updates</h1>
+        <br/>
         <Newslist items = {dummynews}/>
-        </>
+        </div>
     )
 }
 

@@ -5,9 +5,9 @@ import Navbar from "./Navbar"
 const Mainnav = () =>{
     return(
         <div className="nav-container">
-                <h1>AnimeClub</h1>
+                <h1 className="sitelogo">AnimeClub</h1>
                 <Navbar/>
-                <div>
+                <div style={{zIndex:2}}>
                 <button className="signin">Sign In</button>
                 <button className="signup">Sign Up</button>
                 </div>
