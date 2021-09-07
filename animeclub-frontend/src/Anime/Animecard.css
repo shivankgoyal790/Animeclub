@@ -2,41 +2,36 @@
 .animecard{
     display: flex;
     width: 700px;
-    min-width: 600px;
     box-sizing: border-box;
     border: 1px solid black;
     margin-top: 10px;
-    margin-left: 10px;
-    flex-wrap: wrap;
 
 
 }
 
 .anime-image{
-    min-width: 220px;
+    flex: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     height:min-content;
     box-sizing: border-box;
-    height: 340px;
-    background-color: blue;
+    height:45vh;
 
 }
 
 .anime-image > img{
     width: 90%;
-    height: 300px;
+    height: 90%;
     object-fit: cover;
     object-position: top;
-    border-radius: 10px;
     box-sizing: border-box;
 }
 
 .anime-description-container{
 
-    min-width: 400px;
     padding: 10px;  
+    flex: 60%;
 }
 
 
@@ -95,10 +90,82 @@
     display: inline;
 
 }
-img {
-    width: 100px;
+.ratinglogo {
+    width: 120px;
     object-fit: contain;
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px; 
+}
+
+.watch-button{
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: gold;
+    margin: 5px;
+    border: 2px solid gold;
+    font-weight: 700;
+}
+
+.watch-button:hover{
+    background-color: white;
+    cursor: pointer;
+    transition: ease 0.4s;
+}
+
+.watchicon{
+    display: none;
+    margin-right: 5px;
+}
+.watch-button:hover > .watchicon{
+    color: black;
+    display: inline;
+    transition: ease 0.4s;
+}
+
+
+@media screen and (max-width:540px) {
+        .animecard{
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .anime-description-container > p{
+            font-size: 0.9rem;
+        }
+
+        .anime-image > img {
+            object-fit: contain;    
+        }
+
+        .anime-image{
+            height: 20vh;
+        }
+
+        .info{
+            font-size: 18px;
+        }
+        .rating{
+            font-size: 16px;
+        }
+        
+}
+
+@media screen and (max-width:705px) {
+    .animecard{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .anime-description-container > p {
+        font-size: 12px;
+
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+
 }
