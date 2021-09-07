@@ -4,7 +4,6 @@ import Mainnav from "./Mainnav";
 const Mainheader = () =>{
     return(
     <div className="main-background">
-            <div className="backshadow"></div>
             <div className="headercontent">
             <div>
             <Mainnav></Mainnav>

@@ -37,10 +37,20 @@
     cursor: pointer;
 }
 
+
+.streamheader{
+    background-color: #2a3136;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    flex: 100%;
+    padding: 10px 0px;
+}
+
 .signin:hover{
     color: #e5a00d;
     transition: ease 0.5s;
 }
+
 
 .signup{
     border-radius: 36px;

@@ -8,7 +8,13 @@
     z-index: 2;
 }
 
+
 .navlist > li:hover {
+    color: #e5a00d;
+    transition: ease 0.5s;
+}
+
+.navlist > a:hover{
     color: #e5a00d;
     transition: ease 0.5s;
 }

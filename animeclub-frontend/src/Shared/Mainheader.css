@@ -6,18 +6,11 @@
     background-size: contain;
     background-position-x: center;
     overflow-x: hidden;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: multiply;
 }
 
 
-.main-background > .backshadow{
-    height: 650px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.75);
-}
 
 .headercontent{
     display: flex;
