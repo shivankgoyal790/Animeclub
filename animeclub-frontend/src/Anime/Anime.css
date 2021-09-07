@@ -1,0 +1,8 @@
+.stream-container{
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
