@@ -1,0 +1,14 @@
+.contact-container{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 50px;
+}
+
+.message{
+    color: rgb(233, 200, 15);
+}
+
+.message:hover{
+    font-size: 60px;
+}
