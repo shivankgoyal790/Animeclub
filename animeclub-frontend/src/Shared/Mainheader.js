@@ -1,9 +1,11 @@
 import React from "react";
 import "./Mainheader.css"
 import Mainnav from "./Mainnav";
+import Contact from "../Contact/Contact"
 const Mainheader = () =>{
     return(
     <div className="main-background">
+        <Contact />
             <div className="headercontent">
             <div>
             <Mainnav></Mainnav>

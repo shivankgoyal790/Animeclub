@@ -5,10 +5,10 @@ const Navbar = () =>{
     return(
         <ul className="navlist">
             <Link to="/stream"><li>Stream</li></Link>
-            <li>Trending</li>
+            <Link to="/newuploads"><li>New Uploads</li></Link>
             <Link to="/premium"><li>Premium</li></Link>
             <Link to="/movies"><li>Movies</li></Link>
-            <li>News</li>
+            <Link to="/news"><li>News</li></Link>
         </ul>
     )
 }

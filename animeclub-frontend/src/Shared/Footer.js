@@ -5,6 +5,7 @@ import {faFacebook} from "@fortawesome/free-brands-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {Link } from "react-router-dom"
 
 const Footer = () =>{
     return(
@@ -12,7 +13,7 @@ const Footer = () =>{
                 <h1 style={{animation:"none"}}>AnimeClub</h1>
                 <ul className="navlist2">
                     <li>About</li>
-                    <li>Premium</li>
+                    <Link to="/premium"><li>Premium</li></Link>
                     <li>Trending</li>
                     <li>Contact</li>
                 </ul>

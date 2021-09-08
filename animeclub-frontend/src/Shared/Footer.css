@@ -41,3 +41,8 @@
     transition: ease 0.5s;
     cursor: pointer;
 }
+
+.navlist2 > a:hover{
+    color: #e5a00d;
+    transition: ease 0.5s;
+}

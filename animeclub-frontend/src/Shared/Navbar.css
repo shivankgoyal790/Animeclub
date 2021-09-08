@@ -2,7 +2,7 @@
     list-style: none;
     color: white;
     display: flex;
-    width: 35%;
+    width: 450px;
     justify-content: space-evenly;
     align-items: center;
     z-index: 2;
@@ -12,16 +12,22 @@
 .navlist > li:hover {
     color: #e5a00d;
     transition: ease 0.5s;
+    cursor: pointer;
 }
+
 
 .navlist > a:hover{
     color: #e5a00d;
     transition: ease 0.5s;
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:600px) {
         .navlist{
             display: none;
+        }
+
+        .hamburger{
+            display: inline-block;
         }
 }
 
