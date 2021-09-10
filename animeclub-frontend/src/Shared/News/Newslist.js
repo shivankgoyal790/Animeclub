@@ -8,6 +8,7 @@ return(
         {props.items.map(curr =>(
             
             <Newscard
+                key = {curr.id}
                 id = {curr.id}
                 likescount = {curr.likescount}
                 description = {curr.description}

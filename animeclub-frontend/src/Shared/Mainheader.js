@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Mainheader.css"
 import Mainnav from "./Mainnav";
 import Contact from "../Contact/Contact"
+import { AuthContext } from "../AuthContext";
 const Mainheader = () =>{
+    const auth = useContext(AuthContext)
     return(
     <div className="main-background">
-        <Contact />
+        {auth.isLoggedIn && <Contact />}
             <div className="headercontent">
-            <div>
             <Mainnav></Mainnav>
-            </div>
             <div className="site-info">
                 <h1 >Stream Anime Free With AnimeClub.</h1>
                 <p>Stop searching for free Anime websites and watch AnimeClub now.</p>
