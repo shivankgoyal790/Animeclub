@@ -107,17 +107,52 @@ const Auth = (props) =>{
                     console.log("cannot find user");
                     throw new Error("check credentials");
                 }
-                else{
-                    auth.login(responsedata.user.id);
-                }
+                auth.login(responsedata.user.id);
+                console.log("logged in")
+                History.push("/");
+                
+                
 
             }catch(err){
-
+                console.log("check credentials");
+                
             }
 
             }
-        auth.login();
-        History.push("/");
+
+            else{
+                
+                try{
+                    const response =  await fetch("http://localhost:5000/users/signup",{
+                        method:"POST",
+                        headers : {"Content-Type" : "application/json"},
+                        body : JSON.stringify({
+                            name : Newvalue.name,
+                            email : Newvalue.email,
+                            password : Newvalue.password
+                        })
+                    })
+
+                    const responsedata = await response.json();
+
+                    if(!response.ok){
+                        console.log("cannot signup");
+                    }
+
+                    auth.login(responsedata.user.id);
+                    console.log("welcome");
+                    History.push("/");
+                }
+                catch(err){
+                    console.log("server down");
+                    
+                    
+                }
+
+
+            }
+         
+        
     } 
     
    return(
@@ -152,7 +187,7 @@ const Auth = (props) =>{
                 placeholder="Password">
                 </input>
                 <button type ="submit" className="signup btn">{isSignup ? "Sign Up" : "Sign In"}</button>
-                
+                <p>{isvalidemail}{isvalidpass},{isvalidname}</p>
                 <p className="toggle">Already Have an Account?&nbsp;
                 <span onClick={togglehandler} className="switch">{!isSignup ? "Sign Up" : "Sign In"}</span>
                 </p>

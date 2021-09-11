@@ -92,6 +92,8 @@
 
 .toggle{
     color: white;
+    width : 100%;
+    text-align: center;
 }
 .switch{
     color: #e5a00d;
