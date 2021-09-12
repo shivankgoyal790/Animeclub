@@ -10,7 +10,7 @@ import {Link } from "react-router-dom"
 const Footer = () =>{
     return(
         <div className="nav-container footer">
-                <h1 style={{animation:"none"}}>AnimeClub</h1>
+                <h1 className="sitelogo" style={{animation:"none"}}>AnimeClub</h1>
                 <ul className="navlist2">
                     <li>About</li>
                     <Link to="/premium"><li>Premium</li></Link>

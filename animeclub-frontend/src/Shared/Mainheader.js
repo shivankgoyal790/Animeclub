@@ -6,6 +6,7 @@ import { AuthContext } from "../AuthContext";
 const Mainheader = () =>{
     const auth = useContext(AuthContext)
     return(
+        
     <div className="main-background">
         {auth.isLoggedIn && <Contact />}
             <div className="headercontent">
@@ -21,6 +22,7 @@ const Mainheader = () =>{
 
             </div>
         </div>  
+        
     );
 }
 
