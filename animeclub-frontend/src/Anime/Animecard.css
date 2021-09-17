@@ -9,6 +9,10 @@
 
 }
 
+.animecard:hover{
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.1) ;
+}
+
 .anime-image{
     flex: 40%;
     display: flex;
@@ -39,6 +43,7 @@
     margin: 0;
     color: #333;
     font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: capitalize;
 }
 
 .anime-description-container >p {
@@ -53,6 +58,7 @@
     font-size: 16px;
     font-weight: 500;
     font-family: 'Open Sans Condensed', sans-serif;
+    text-transform:uppercase;
 }
 
 .vr{

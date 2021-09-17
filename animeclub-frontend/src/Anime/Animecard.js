@@ -16,7 +16,7 @@ const Animecard = (props) =>{
                 <div>
                     <span className="info">{props.year}</span>
                     {props.episodes && <span className="vr"></span>}
-                    <span className="info">{props.episodes}</span>
+                    <span className="info">{!props.ismovie && `${props.episodes} episodes`}</span>
                     <span className="vr"></span>
                     <span className="info">{props.type}</span>
                 </div>

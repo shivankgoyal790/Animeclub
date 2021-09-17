@@ -4,20 +4,23 @@ import Animecard from "./Animecard";
 
 const Animelist = (props) =>{
     return(
-        <div className="animeflex">
-
+       <>
             {props.items.map(curr => (
+                <div className="animeflex" key = {props.id}>
+
                 <Animecard 
                 name = {curr.name}
                 year = {curr.year}
                 episodes = {curr.episodes}
-                type = {curr.type}
+                type = {curr.Type}
                 imdbrating = {curr.imdbrating}
-                crunchyrollrating = {curr.crunchyrollrating}
+                crunchyrollrating = {curr.crunchyrating}
                 summary = {curr.summary}
+                ismovie = {curr.ismovie}
                  />
+                 </div>
             ))}
-        </div>
+        </>
     )
 }
 
