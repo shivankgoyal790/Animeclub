@@ -33,9 +33,29 @@ const Createitem = async (req,res,next) =>{
 
 const getmovies = async (req,res,next) =>{
 
+    let moviecheck;
+    try{
+        moviecheck = await Item.find({ismovie : true});
+        res.status(200).json({movies: moviecheck});
+        }
+        catch(err){
+            console.log(err);
+            res.status(404).json("cannot get");
+        }
+
 }
 
 const getanime = async (req,res,next) =>{
+    
+    let animecheck;
+    try{
+        animecheck = await Item.find({ismovie : false});
+        res.status(200).json({anime : animecheck});
+        }
+        catch(err){
+            console.log(err);
+            res.status(404).json("cannot get");
+        }
 
 }
 
