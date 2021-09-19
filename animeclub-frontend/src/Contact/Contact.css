@@ -12,3 +12,34 @@
 .message:hover{
     font-size: 60px;
 }
+
+.messagebox{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 280px;
+    border: 1px solid rgb(150, 149, 149);
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+    background-color: white;
+    border-radius: 6px;
+}
+
+.messagebox-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(13, 225, 240);
+    margin: 0;
+    padding: 6px 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: white;
+    border-radius: 6px;
+
+
+}
+
+.headericons{
+    margin-right: 6px;
+    color: white;
+}
