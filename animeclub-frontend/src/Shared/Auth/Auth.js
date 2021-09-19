@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { AuthContext } from "../../AuthContext";
 import "./Auth.css"
 import { VALIDATOR_EMAIL ,VALIDATOR_REQUIRE,validate ,VALIDATOR_MINLENGTH } from "../validators";
+import Lodaingspinner from "../Loadingspinner";
 
 const Auth = (props) =>{
     const auth = useContext(AuthContext);
@@ -12,6 +13,7 @@ const Auth = (props) =>{
     const [isvalidemail , setvalidemail] = useState(true);
     const [isvalidpass ,setvalidpass] = useState(true);
     const [isvalidname , setvalidname] = useState(true);
+    const [isloading , setisloading] = useState(false);
     const togglehandler = () =>{
             if(isSignup){
                 setisSignup(false);
@@ -91,6 +93,7 @@ const Auth = (props) =>{
             if(!isSignup){
 
                 try{
+                    setisloading(true)
                 const response = await fetch("http://localhost:5000/users/login",{
                     method : "POST",
                     headers : {'Content-Type' : 'application/json'},
@@ -105,8 +108,10 @@ const Auth = (props) =>{
 
                 if(!response.ok){
                     console.log("cannot find user");
+                    setisloading(false);
                     throw new Error("check credentials");
                 }
+                setisloading(false);
                 auth.login(responsedata.user.id);
                 console.log("logged in")
                 History.push("/");
@@ -114,6 +119,7 @@ const Auth = (props) =>{
                 
 
             }catch(err){
+                setisloading(false);
                 console.log("check credentials");
                 
             }
@@ -123,6 +129,7 @@ const Auth = (props) =>{
             else{
                 
                 try{
+                    setisloading(true);
                     const response =  await fetch("http://localhost:5000/users/signup",{
                         method:"POST",
                         headers : {"Content-Type" : "application/json"},
@@ -136,14 +143,16 @@ const Auth = (props) =>{
                     const responsedata = await response.json();
 
                     if(!response.ok){
+                        setisloading(false);
                         console.log("cannot signup");
                     }
-
+                    setisloading(false);
                     auth.login(responsedata.user.id);
                     console.log("welcome");
                     History.push("/");
                 }
                 catch(err){
+                    setisloading(false);
                     console.log("server down");
                     
                     
@@ -157,11 +166,13 @@ const Auth = (props) =>{
     
    return(
        <div className="auth-background">
+        {isloading && <Lodaingspinner/>}
         <div className="auth-container">
             <div className="logo-container">
                 <h1 className="company-logo">AnimeClub</h1>
             </div>
             <div className="auth">
+           
                 <h1 className="auth-logo">Authenticate</h1>
                 <form onSubmit={submithandler} className="forminput">
                 <input

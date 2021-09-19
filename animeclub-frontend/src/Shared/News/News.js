@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import Lodaingspinner from "../Loadingspinner";
 import "./News.css"
 import Newslist from "./Newslist"
 
@@ -51,6 +52,7 @@ const News = () =>{
         <div id="latestnews" className="news-block">
         <h1 className="update">Latest Updates</h1>
         <br/>
+        {!newsitems && <Lodaingspinner/> }
         {newsitems && <Newslist items = {newsitems}/>}
         </div>
     )

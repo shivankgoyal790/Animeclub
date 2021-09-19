@@ -6,7 +6,7 @@ const Allnews = () =>{
     return(
         <div>
                 <div className="streamheader"><Mainnav /></div>
-                <News />
+                <News allnews/>
         </div>
     )
 }
