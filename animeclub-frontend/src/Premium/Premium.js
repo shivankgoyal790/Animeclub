@@ -2,8 +2,12 @@ import React from "react";
 import "./Premium.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRupeeSign } from "@fortawesome/free-solid-svg-icons";
+import Mainnav from "../Shared/Mainnav";
 const Premium = () =>{
+
     return(
+        <>
+        <div className="streamheader"><Mainnav /></div>
         <div className="premium-card-container">
             <div className="premium-card">
             <h1 className="mysitelogo">AnimeClub</h1>
@@ -33,6 +37,7 @@ const Premium = () =>{
             </div>
             
         </div>
+        </>
     )
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Lodaingspinner from "../Shared/Loadingspinner";
 import Mainnav from "../Shared/Mainnav";
 import Animelist from "./Animelist";
 
@@ -61,6 +62,7 @@ const Anime = () =>{
         <div className="streamheader">
             <Mainnav />
         </div>
+        {!Animeitems && <Lodaingspinner/>}
         {Animeitems && <Animelist items = {Animeitems} id="1"/>}
         </div>
     )

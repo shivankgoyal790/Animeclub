@@ -1,4 +1,5 @@
 import React, { useState , useEffect} from "react";
+import Lodaingspinner from "../Shared/Loadingspinner";
 import Mainnav from "../Shared/Mainnav";
 import Movielist from "./Movielist";
 
@@ -54,6 +55,7 @@ const Movie = () =>{
         <div className="streamheader">
             <Mainnav />
         </div>
+        {!Movieitems && <Lodaingspinner/>}
         {Movieitems && <Movielist items = {Movieitems} id="1"/>}
         </div>
     )
