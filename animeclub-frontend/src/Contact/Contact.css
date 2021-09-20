@@ -18,18 +18,32 @@
     bottom: 25px;
     right: 25px;
     width: 280px;
-    border: 1px solid rgb(150, 149, 149);
-    box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+    border: 1px solid rgb(190, 190, 190);
+    box-shadow: 6px 6px 20px rgba(0,0,0,0.5);
     background-color: white;
     border-radius: 6px;
 }
 
+
+.chat{
+    width: 100%;
+    box-sizing: border-box;
+    height: 250px;
+    overflow-y: hidden;
+    background-image: url("../images/itachi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+}
 .messagebox-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(13, 225, 240);
+    background-color: gold;
     margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 6px 5px;
     box-sizing: border-box;
     font-size: 20px;
@@ -42,4 +56,55 @@
 .headericons{
     margin-right: 6px;
     color: white;
+}
+
+.usermessage{
+    color: white;
+    background-color: gold;
+    width: fit-content;
+    max-width: 68%;
+    left: 2%;
+    position: absolute;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-top: 14px;
+    
+}
+
+.adminmessage{
+    color: white;
+    background-color: gold;
+    max-width: 68%;
+    position: fixed;
+    right:2.5%;
+    width:fit-content;
+    font-size: 16px;
+    padding: 4px 12px;
+    border-radius: 16px;
+    margin-top: 14px;
+}
+.inputbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid gold;
+    box-sizing: border-box;
+}
+
+.inputbox > input{
+    width: 90%;
+    border: none;
+    background-color: white;
+    padding: 15px 5px;
+    font-size: 14px;
+    outline: none;
+
+}
+
+.sendbtn{
+    width: 10%;
+    background-color: white;
+    color: gold;
+    cursor: pointer;
 }
