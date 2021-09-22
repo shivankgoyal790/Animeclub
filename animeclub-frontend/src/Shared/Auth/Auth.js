@@ -108,6 +108,7 @@ const Auth = (props) =>{
 
                 if(!response.ok){
                     console.log("cannot find user");
+                    setvalidpass(false);
                     setisloading(false);
                     throw new Error("check credentials");
                 }
@@ -144,6 +145,9 @@ const Auth = (props) =>{
 
                     if(!response.ok){
                         setisloading(false);
+                        setvalidname(false);
+                        setvalidpass(false);
+                        setvalidemail(false);
                         console.log("cannot signup");
                     }
                     setisloading(false);
@@ -174,6 +178,9 @@ const Auth = (props) =>{
             <div className="auth">
            
                 <h1 className="auth-logo">Authenticate</h1>
+                {isSignup && (!isvalidpass || !isvalidemail || !isvalidname) && <p className="error">Please provide correct information</p>}
+                {!isSignup && (!isvalidpass || !isvalidemail) && <p className="error">Please provide correct information</p>}
+                
                 <form onSubmit={submithandler} className="forminput">
                 <input
                 style={{display: isSignup ? "block" : "none"}} 
