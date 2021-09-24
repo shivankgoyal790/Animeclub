@@ -7,9 +7,12 @@ import Anime from './Anime/Anime';
 import Movie from './Anime-movie/Movie';
 import Auth from "../src/Shared/Auth/Auth"
 import Premium from './Premium/Premium';
+import Sidedrawer from "../src/Shared/Sidedrawer.js"
 import Allnews from './Shared/News/AllNews';
 import { useCallback, useState } from 'react';
 import  {AuthContext } from '../src/AuthContext';
+import Newuploads from './Newuploads/Newuploads';
+
 
 const App = () => {
  
@@ -73,6 +76,7 @@ const logout = useCallback(()=>{
     <Router>
     <Switch>
            <Route path="/" exact>
+           <Sidedrawer />
         <Mainheader/>
         <News/>
         <Footer/>
@@ -81,6 +85,7 @@ const logout = useCallback(()=>{
       {/* <Route path="/Auth" exact><Auth issignup = {true}/></Route> */}
       <Route path="/signup" exact><Auth issignup/></Route>
       <Route path="/signin" exact><Auth/></Route>
+      <Route path="/newuploads" exact><Newuploads/></Route>
       <Route path="/movies" exact><Movie/></Route>
       <Route path="/premium" exact><Premium /></Route>
       <Route path="/news" exact><Allnews /></Route>

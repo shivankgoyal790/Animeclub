@@ -7,8 +7,12 @@ const Premium = () =>{
 
     return(
         <>
+      
         <div className="streamheader"><Mainnav /></div>
         <div className="premium-card-container">
+        <div className="already_premium" style ={{display:"none"}}>
+            <h1>You are already a Premium User</h1>
+        </div>
             <div className="premium-card">
             <h1 className="mysitelogo">AnimeClub</h1>
             <h1 className="pricetag"><FontAwesomeIcon className="price" icon={faRupeeSign} />99</h1>
