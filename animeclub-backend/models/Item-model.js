@@ -1,4 +1,3 @@
-const { Decimal128 } = require("bson");
 const mongoose = require("mongoose");
 
 const itemschema = new mongoose.Schema({
@@ -6,10 +5,12 @@ const itemschema = new mongoose.Schema({
     year : {type : Number , required:true},
     episodes : {type : Number},
     Type : {type : String,required:true},
-    imdbrating : {type : Decimal128 , required:true},
-    crunchyrating : {type : Decimal128 , required : true},
+    imdbrating : {type : Number , required:true},
+    crunchyrating : {type : Number , required : true},
     summary : {type : String , required:true},
-    ismovie : {type :Boolean ,required:true}
+    ismovie : {type :Boolean ,required:true},
+    image :{type:String ,required:true},
+    createdAt : {type:Date , default: Date.now()}
 
 
 })
