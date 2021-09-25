@@ -1,6 +1,5 @@
 import React from "react";
 import "./Animecard.css"
-import Logo from "../images/One1_files/MV5BNzEyZWI4MTQtNWQ1ZC00Y2VjLTkxNjQtMzVmMjkxNWUyNjM2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg"
 import Logo1 from "../images/crunchyroll.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +9,7 @@ const Animecard = (props) =>{
     return(
         <div className="animecard" >
             <div className="anime-image">
-            <img src={Logo} alt="pic" /></div>
+            <img src={`http://localhost:5000/${props.image}`} alt="pic" /></div>
             <div className="anime-description-container">
                 <h1>{props.name}</h1>
                 <div>
