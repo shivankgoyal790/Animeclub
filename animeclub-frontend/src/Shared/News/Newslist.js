@@ -13,6 +13,7 @@ return(
                 likescount = {curr.likescount}
                 description = {curr.description}
                 headline = {curr.headline}
+                image = {curr.image}
             />
             ))
         }
