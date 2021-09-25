@@ -16,6 +16,7 @@ const Movielist = (props) =>{
                 crunchyrollrating = {curr.crunchyrating}
                 summary = {curr.summary}
                 ismovie = {curr.ismovie}
+                image = {curr.image}
                  />
                   </div>
             ))}
