@@ -1,5 +1,5 @@
 const News = require("../models/News-model");
-
+const fs = require('fs');
 const getnewsbytime = async (req,res,next) =>{
 
     try{
@@ -21,7 +21,8 @@ const createnews = async (req,res,next) =>{
                 headline : headline,
                 description : description,
                 likescount : 0,
-                createdAt : Date.now()
+                createdAt : Date.now(),
+                image : req.file.path
             });
     }
     catch(err){
@@ -58,7 +59,7 @@ const updatecount = async (req,res,next) =>{
         await findnews.save();
     }
     catch(err){
-        console.log(error);
+        console.log(err);
     }
 
     res.status(201).json({findnews});

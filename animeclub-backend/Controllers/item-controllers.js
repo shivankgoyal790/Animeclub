@@ -1,4 +1,6 @@
 const Item = require("../models/Item-model");
+const fs = require('fs');
+
 
 
 const Createitem = async (req,res,next) =>{
@@ -7,7 +9,7 @@ const Createitem = async (req,res,next) =>{
     try{
         newitem = await new Item({
             name,year,episodes,Type,imdbrating,crunchyrating,
-            summary,ismovie            
+            summary,ismovie ,image:req.file.path       
         })
 
         
@@ -58,6 +60,7 @@ const getanime = async (req,res,next) =>{
         }
 
 }
+
 
 exports.Createitem = Createitem;
 exports.getanime = getanime;

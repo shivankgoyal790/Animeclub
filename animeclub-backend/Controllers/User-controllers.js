@@ -13,12 +13,16 @@ const Login = async (req,res,next) =>{
         usercheck =await Users.findOne({email:email});
     }
     catch(err){
-        console.log(err);
+        console.log(err);   
         res.status(404).json("try again");
     }
-
+        if(!usercheck){
+                res.status(404).json("cannot find user");
+        }
+    
+else{
     try{
-        if(!usercheck || !usercheck.password)
+        if(usercheck.password !== password)
         res.status(400).json("check credentials");
         else
         res.json({message: "you are logged" , user : usercheck});
@@ -27,6 +31,7 @@ const Login = async (req,res,next) =>{
         console.log(err);
         res.status(404).json("canont Login");
     }
+}
 }
 
 
